@@ -1,5 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
+//Install-Package ServiceStack.Text -- use this in NuGet to install package
+using ServiceStack;
+using ServiceStack.Text;
 
 namespace Financial_Portfolio.Data
 {
@@ -16,7 +20,7 @@ namespace Financial_Portfolio.Data
         public List<Stock_Data> Get_Test_Stocks()
         {
             // List<Stock_Data> test_stock = new List<Stock_Data>();
-            var symbol = "FB";
+            var symbol = "AAPL";
             var apiKey = "E6ZUIRZSKLBENGRD"; // retrieve your api key from https://www.alphavantage.co/support/#api-key
             var test_stock = $"https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol={symbol}&apikey={apiKey}&datatype=csv"
                             .GetStringFromUrl().FromCsv<List<Stock_Data>>();
