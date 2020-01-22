@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Financial_Portfolio.Models;
+using Financial_Portfolio.Data;
 
 namespace Financial_Portfolio.Controllers
 {
@@ -20,6 +21,11 @@ namespace Financial_Portfolio.Controllers
 
         public IActionResult Index()
         {
+            //test
+            /*
+            List<Stock_Data> temp = Stock_Data.Get_Test_Stocks();
+            Viewbag.temp = temp;
+            */
             return View();
         }
 
