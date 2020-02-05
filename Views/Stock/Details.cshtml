@@ -1,0 +1,66 @@
+﻿@model Financial_Portfolio.Models.Stock
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Stock</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Symbol)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Symbol)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Close_price)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Close_price)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Stock_type)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Stock_type)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Stock_interval)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Stock_interval)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Max_date)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Max_date)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Min_date)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Min_date)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

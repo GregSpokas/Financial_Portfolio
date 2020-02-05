@@ -1,0 +1,72 @@
+﻿@model Financial_Portfolio.Models.Stock
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Stock</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Symbol)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Symbol)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Close_price)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Close_price)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Stock_type)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Stock_type)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Stock_interval)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Stock_interval)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Max_date)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Max_date)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Min_date)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Min_date)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>
