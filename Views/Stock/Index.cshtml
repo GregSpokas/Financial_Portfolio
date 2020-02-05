@@ -1,0 +1,63 @@
+﻿@model IEnumerable<Financial_Portfolio.Models.Stock>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Symbol)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Close_price)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Stock_type)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Stock_interval)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Max_date)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Min_date)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Symbol)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Close_price)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Stock_type)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Stock_interval)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Max_date)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Min_date)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
+        </td>
+    </tr>
+}
+
+</table>
